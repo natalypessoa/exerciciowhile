@@ -1,0 +1,22 @@
+
+/*Nataly Pessoa de Paula Cruz
+Faça um algoritmo que imprima a tabuada do 5.
+*/
+
+public class Exercicio5 {
+    public static void main(String[] args) {
+       
+        int contador = 1; 
+        int resultado;
+
+        System.out.println("=== Tabuada do 5 ===");
+
+       
+        while (contador <= 10) {
+            resultado = 5 * contador;
+            System.out.println("5 x " + contador + " = " + resultado);
+            
+            contador++; 
+        }
+    }
+}
