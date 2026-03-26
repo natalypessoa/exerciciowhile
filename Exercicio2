@@ -1,0 +1,29 @@
+/*Nataly Pessoa de Paula Cruz
+Faça um algoritmo que leia 10 	números inteiros e diga:
+quantos são pares;
+e quantos são ímpares.
+*/
+
+import java.util.Scanner;
+
+public class Exercicio2 {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        int contador = 1, num, pares = 0, impares = 0;
+
+        while (contador <= 10) {
+            System.out.println("Digite o " + contador + "º número:");
+            num = entrada.nextInt();
+            
+            if (num % 2 == 0) { // Verifica se é par [cite: 238, 239]
+                pares++;
+            } else {
+                impares++;
+            }
+            contador++;
+        }
+        System.out.println("Total de pares: " + pares);
+        System.out.println("Total de ímpares: " + impares);
+        entrada.close();
+    }
+}
