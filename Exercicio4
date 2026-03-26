@@ -1,0 +1,20 @@
+/*Nataly Pessoa de Paula Cruz
+Faça um algoritmo que imprima a metade de cada número de 10 a 20.
+– Exemplo:
+¨ a metade de 10 é 5.0
+¨ a metade de 11 é 5.5
+¨ a metade de 12 é 6.0
+¨ . . .
+¨ a metade de 18 é 9.0
+¨ a metade de 19 é 9.5
+¨ a metade de 20 é 10.0
+*/
+public class Exercicio4 {
+    public static void main(String[] args) {
+        double numero = 10;
+        while (numero <= 20) {
+            System.out.println("A metade de " + (int)numero + " é " + (numero / 2));
+            numero++;
+        }
+    }
+}
