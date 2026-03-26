@@ -1,0 +1,47 @@
+/* Nataly Pessoa de Paula Cruz
+Faça um algoritmo que leia o código do produto e a quantidade que o cliente deseja comprar.
+O cliente pode comprar mais de um produto, pergunte se ele deseja continuar comprando.
+Calcule o valor total a ser pago por cada produto e o valor total da compra.
+*/
+
+import java.util.Scanner;
+
+public class Exercicio9 {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        
+        int codigo, quantidade, continuar = 1; 
+        double totalItem = 0, totalCompra = 0; 
+
+        while (continuar == 1) {
+            System.out.println("Digite o código do produto (100 a 105):");
+            codigo = entrada.nextInt();
+            
+            System.out.println("Digite a quantidade:");
+            quantidade = entrada.nextInt();
+
+            switch (codigo) {
+                case 100: totalItem = quantidade * 1.20; break;
+                case 101: totalItem = quantity * 1.30; break;
+                case 102: totalItem = quantity * 1.50; break;
+                case 103: totalItem = quantity * 1.20; break;
+                case 104: totalItem = quantity * 1.30; break;
+                case 105: totalItem = quantity * 1.00; break;
+                default:
+                    System.out.println("Código inválido!");
+                    totalItem = 0;
+            }
+
+            totalCompra += totalItem;
+            System.out.printf("Subtotal deste produto: R$ %.2f\n", totalItem);
+            
+            System.out.println("Deseja continuar comprando? (1 para Sim / 0 para Não):");
+            continuar = entrada.nextInt();
+        }
+
+        System.out.printf("\nValor total da compra: R$ %.2f\n", totalCompra);
+        System.out.println("Obrigado pela preferência!");
+        
+        entrada.close();
+    }
+}
