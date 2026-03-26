@@ -1,0 +1,36 @@
+/* Nataly Pessoa de Paula Cruz
+Faça um programa que: leia duas notas de 5 alunos
+Calcule e mostre a média aritmética de cada um deles;
+Para cada nota lida:
+A entrada de cada nota deve ser validada!
+¨ ou seja, o programa somente avança se a entrada da nota estiver entre 0 e 10.
+¨ caso contrário, solicite-a novamente.
+Utilize o do.. . while para validar as notas.
+*/
+
+import java.util.Scanner;
+
+public class Exercicio8 {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        int aluno = 1;
+        double n1, n2, media;
+
+        while (aluno <= 5) {
+            do {
+                System.out.println("Aluno " + aluno + " - Digite a Nota 1 (0-10):");
+                n1 = entrada.nextDouble();
+            } while (n1 < 0 || n1 > 10);
+
+            do {
+                System.out.println("Aluno " + aluno + " - Digite a Nota 2 (0-10):");
+                n2 = entrada.nextDouble();
+            } while (n2 < 0 || n2 > 10);
+
+            media = (n1 + n2) / 2;
+            System.out.println("Média do aluno " + aluno + ": " + media);
+            aluno++;
+        }
+        entrada.close();
+    }
+}
